@@ -28,7 +28,7 @@ The loop is designed around eight operating controls:
 Requires Node.js 20 or later. There are no runtime dependencies.
 
 ```bash
-git clone https://github.com/OWNER/foreign-trade-agent-os.git
+git clone https://github.com/huayuanxm-glitch/foreign-trade-agent-os.git
 cd foreign-trade-agent-os
 npm test
 npm run example
