@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Foreign Trade Agent OS workflow",
+  "type": "object",
+  "required": ["name", "steps", "approvalPolicy"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "agent", "task"],
+        "properties": {
+          "id": { "type": "string" },
+          "agent": { "type": "string" },
+          "task": { "type": "string" },
+          "requiresEvidence": { "type": "boolean", "default": true },
+          "checkpoint": { "type": "boolean", "default": false },
+          "fallback": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "approvalPolicy": {
+      "type": "object",
+      "required": ["humanApprovalRequired"],
+      "properties": {
+        "humanApprovalRequired": { "type": "boolean" },
+        "independentReviewRequired": { "type": "boolean", "default": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "name": "foreign-trade-agent-os",
+  "version": "0.1.0",
+  "description": "Model-agnostic, evidence-first multi-agent orchestration for foreign-trade workflows.",
+  "license": "Apache-2.0",
+  "private": false,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "example": "node examples/minimal-workflow.js"
+  },
+  "engines": { "node": ">=20" }
+}
